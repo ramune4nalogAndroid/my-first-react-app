@@ -4,7 +4,6 @@ import './App.css'
 import Home from './components/pages/Home';
 import TablePage from './components/pages/TablePage';
 
-
 export interface MyButtonProps {
   Description: string;
   HandleClick: () => void;
@@ -56,8 +55,20 @@ export interface DataTaskTable {
     user_phone_extension: number;
     label?: string;
     minWidth?: number;
-    align?: 'right';
+    align?: 'right' | 'left' | 'center';
     format?: (value: number) => string;
+}
+
+export interface MySwitchProps {
+  label?: string;
+  IsChecked: boolean;
+  HandleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface MyTableProps {
+  columns: ColumnTaskTable[];
+  rows: DataTaskTable[];
+  showUserInfoSwitch: MySwitchProps;
 }
 
 function App() {

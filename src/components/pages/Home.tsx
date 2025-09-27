@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { SelectChangeEvent } from "@mui/material";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Alert } from "@mui/material";
+import Alert from '@mui/material/Alert';
 import CheckIcon from '@mui/icons-material/Check';
 import type { MyButtonProps, MySelectProps, MyDialogProps } from "../../App";
 import IntroductionCard from "../card/IntroductionCard";

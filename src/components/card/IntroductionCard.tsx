@@ -1,7 +1,10 @@
 import Button from '../commons/Button';
 import SelectInput from '../commons/SelectInput';
 import IntroductionDialog from '../dialogs/IntroductionDialog';
-import { Card, CardActions, CardContent, Typography } from '@mui/material';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 import type { IntroductionCardProps } from '../../App';
 
 function IntroductionCard({ count, incrementButton, decrementButton, selectIncrementColorButton, selectDecrementColorButton, dialogButton }: IntroductionCardProps) {
