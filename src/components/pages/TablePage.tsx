@@ -11,9 +11,11 @@ function TablePage() {
     const hiddenColumns = ['user_email', 'user_regional_department', 'user_phone_extension'];
     const [showUserInfo, setShowUserInfo] = React.useState(false);
 
-    const handleSwitchChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-        setShowUserInfo(event.target.checked);
-    };
+    const darkTheme = createTheme({
+        palette: {
+            mode: 'dark',
+            },
+    });
 
     const allColumns: ColumnTaskTable[] =[
         { id: 'task_id', label: 'Task ID', minWidth: 50, align: 'left', format: (value: number) => value.toLocaleString('en-US') },
@@ -51,12 +53,11 @@ function TablePage() {
     const handlePreviousPage = () => {
         navigate("/");
     };
+
+    const handleSwitchChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+        setShowUserInfo(event.target.checked);
+    };
     
-    const darkTheme = createTheme({
-        palette: {
-            mode: 'dark',
-            },
-    });
     const previousPageButton: MyButtonProps = {
         Description: "Previous Page",
         HandleClick: handlePreviousPage,
